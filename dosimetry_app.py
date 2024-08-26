@@ -4,6 +4,7 @@ from tkinter import filedialog
 from analysis import *
 import os
 import threading
+import webbrowser
 
 def gender_interface(user_input, root):
     '''
@@ -227,7 +228,7 @@ def setup():
     Initializes and configures the main Tkinter GUI window for the Dosimetry App.
     '''
     master = tk.Tk()
-    master.geometry("675x450")
+    master.geometry("650x500")
     master.title("Dosimetry App")
     user_input = {"gender":tk.StringVar(value="no_selection"), 
                   "cal_levels":[],                      # List of calibration levels
@@ -258,6 +259,10 @@ def setup():
 
     reset_button = tk.Button(main_frame, text="Reset", command=lambda:reset(master))
     reset_button.pack(side=tk.LEFT, padx=20, pady=10)
+
+    git_label = tk.Label(master, text="View on GitHub", fg="blue", cursor="hand2")
+    git_label.pack(anchor=tk.W, padx=20, pady=10)
+    git_label.bind("<Button-1>", lambda x: webbrowser.open_new_tab("https://github.com/YehyaS/Dosimetry-App"))
 
     # Allow the scroll region to adjust dynamically
     main_frame.bind("<Configure>", on_frame_configure)
