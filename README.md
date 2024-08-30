@@ -15,6 +15,12 @@ Alternatively, if you'd like to build the app yourself from the source code:
 2. Run: `pyinstaller ./dosimetry_app.py --windowed --onefile`.
 3. The compiled app will be located in the `dist` directory as a standalone executable.
 
+### Tutorials
+
+Here are some visual tutorials to guide you through the process:
+- [Calibration Tutorial](https://youtu.be/YO5r1BUESJ0) (credits to Pasquale Bottalico)
+- [Software Demonstration](https://youtu.be/0-rT5NyHDTM) (credits to Charlie Nudelman)
+
 ### Usage
 
 1. **Select Gender**: Choose the speaker's gender. If "Other" is selected, you may specify details.
